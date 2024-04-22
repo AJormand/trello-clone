@@ -4,11 +4,16 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import { Platypi } from "next/font/google";
+import { Platypi, Poppins } from "next/font/google";
 
 const playtipi = Platypi({
   weight: "600",
   subsets: ["latin"],
+});
+
+const textFont = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const MarketingPage = () => {
@@ -33,7 +38,12 @@ const MarketingPage = () => {
         </div>
       </div>
 
-      <div className="my-4 text-sm md:text-xl text-neutral-400 nt-4 max-w-xs md:max-w-2xl text-center mx-auto">
+      <div
+        className={cn(
+          "my-4 text-sm md:text-xl text-neutral-400 nt-4 max-w-xs md:max-w-2xl text-center mx-auto",
+          textFont.className
+        )}
+      >
         Collaborate, manage projects, and reach new productivity peaks. From
         high rises to the home office, the way your team works is unique -
         accomplish it all with Taskify
