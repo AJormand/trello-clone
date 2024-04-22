@@ -4,17 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import { Platypi, Poppins } from "next/font/google";
-
-const playtipi = Platypi({
-  weight: "600",
-  subsets: ["latin"],
-});
-
-const textFont = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+import { headingFont, textFont } from "@/public/fonts/fonts";
 
 const MarketingPage = () => {
   return (
@@ -22,7 +12,7 @@ const MarketingPage = () => {
       <div
         className={cn(
           "flex items-center justify-center flex-col",
-          playtipi.className
+          headingFont.className
         )}
       >
         <div className="mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase">
