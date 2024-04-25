@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion, AccordionTrigger } from "@/components/ui/accordion";
+import { AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -25,7 +25,7 @@ export const NavItem = ({
 }: NavItemProps) => {
   return (
     <div>
-      <Accordion value={organization.id} className="border-none">
+      <AccordionItem value={organization.id} className="border-none">
         <AccordionTrigger
           onClick={() => onExpand(organization.id)}
           className={cn(
@@ -44,7 +44,7 @@ export const NavItem = ({
             </div>
           </div>
         </AccordionTrigger>
-      </Accordion>
+      </AccordionItem>
     </div>
   );
 };
