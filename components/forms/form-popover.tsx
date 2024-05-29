@@ -1,4 +1,5 @@
 "use client";
+import { ElementRef, useRef } from "react";
 
 import {
   Popover,
@@ -30,6 +31,8 @@ export const FormPopover = ({
   align,
   sideOffset = 0,
 }: FormPopoverProps) => {
+  const closeRef = useRef<ElementRef<"button">>(null);
+
   const { execute, fieldErrors } = useAction(createBoard, {
     onSuccess: (data) => {
       console.log({ data });
